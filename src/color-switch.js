@@ -14,13 +14,13 @@ const colors = [
   };
 
 
-  let interval = null;
+  let intervalId= null;
 
   
   
   function startChanging() {
-    if (!interval) {
-      interval = setInterval(() => {
+    if (!intervalId) {
+      intervalId = setInterval(() => {
         randomIntegerFromInterval(0, [colors.length - 1]);
         refs.body.setAttribute(
           'style',
@@ -33,8 +33,8 @@ const colors = [
   }
   
   function stopChanging() {
-    clearInterval(interval);
-    interval = null;
+    clearInterval(intervalId);
+    intervalId = null;
   }
 
   refs.startButton.addEventListener('click', startChanging);
