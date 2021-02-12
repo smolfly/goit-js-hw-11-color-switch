@@ -8,8 +8,8 @@ const colors = [
   ];
 
   const refs = {
-    startButton: document.querySelector('[data-action="start"]'),
-    stopButton: document.querySelector('[data-action="stop"]'),
+    startBtn: document.querySelector('[data-action="start"]'),
+    stopBtn: document.querySelector('[data-action="stop"]'),
     body: document.querySelector('body'),
   };
 
@@ -37,8 +37,8 @@ const colors = [
     intervalId = null;
   }
 
-  refs.startButton.addEventListener('click', startChanging);
-  refs.stopButton.addEventListener('click', stopChanging);
+  refs.startBtn.addEventListener('click', startChanging);
+  refs.stopBtn.addEventListener('click', stopChanging);
 
   const randomIntegerFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
